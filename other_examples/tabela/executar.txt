@@ -1,0 +1,6 @@
+javac *.java
+rmiregistry &
+java -Djava.security.policy=server.policy Server
+
+Em outro terminal:
+java -Djava.security.policy=server.policy Client

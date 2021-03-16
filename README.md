@@ -1,4 +1,23 @@
-# distributed-computing
+# Distributed Computing Repository
+
+## Remote Method Invocation - Java
+
+To compile and run go to rmi/ directory and run:
+
+```sh
+javac *.java
+rmiregistry &
+java -Djava.security.policy=server.policy Server
+```
+
+In another terminal execute:
+
+```sh
+java -Djava.security.policy=server.policy Client
+```
+
+The program implements a client-shared monotonic counter.
+
 ## Socket Implementation - C
 
 Execute calculator server/client program:

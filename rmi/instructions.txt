@@ -1,0 +1,9 @@
+to compile:
+javac *.java
+
+to run server:
+rmiregistry &
+java -Djava.security.policy=server.policy Server
+
+to run client (another terminal):
+java -Djava.security.policy=server.policy Client
