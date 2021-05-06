@@ -21,8 +21,7 @@ public class WhatsClient implements Receiver {
 
         instances should have the exact same view with the same ordering of its instances in the list.
     */
-    public void viewAccepted(View new_view) {
-        //System.out.println("** view: " + new_view);
+    public void viewAccepted(View new_view) {        
         this.local_view = new_view;        
         if (this.local_address != null) {
         	System.out.println("A member joined/left the group. Members in Group now are:");
