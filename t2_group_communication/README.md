@@ -21,6 +21,18 @@ In two different terminals do this to test Jgroups:
 
 This should open a draw application.
 
+## Run Application
+
+```bash
+cd jgroups
+make
+make run
+```
+or
+```bash
+java -Djgroups.bind_addr=127.0.0.1 -Djgroups.tcpping.initial_hosts=127.0.0.1[7800] WhatsClient group_name
+```
+
 ## Useful links
 
 * [1. Site](http://www.jgroups.org/api.html)

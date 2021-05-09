@@ -71,7 +71,7 @@ public class WhatsClient implements Receiver {
     	boolean stop = false;
         BufferedReader buffer=new BufferedReader(new InputStreamReader(System.in));
         //System.out.println("Type the message you want to send to your group.");
-        System.out.print("> ");
+        System.out.print("\n> ");
         System.out.flush();
         try {
             String line=buffer.readLine();
