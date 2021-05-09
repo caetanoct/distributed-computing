@@ -9,6 +9,7 @@ java -jar jgroups-5.0.0.Final.jar
 
 Use this command to extract files to jgroup directory.
 ```bash
+mkdir jgroups
 cd jgroups
 jar -xf ../jgroups-5.0.0.Final.jar
 ```
@@ -23,14 +24,32 @@ This should open a draw application.
 
 ## Run Application
 
+Go to jgroups directory and extract WhatsClient.java and Makefile to there.
+
 ```bash
+mv WhatsClient.java jgroups
+mv Makefile jgroups
 cd jgroups
 make
 make run
 ```
-or
+
+or after compiling run:
 ```bash
 java -Djgroups.bind_addr=127.0.0.1 -Djgroups.tcpping.initial_hosts=127.0.0.1[7800] WhatsClient group_name
+```
+where group_name is the name of the cluster. All clients will have their local chat history of all the groups they participated.
+
+Each instance is one Client connected to the group, you can run multiple instances.
+
+You can view all .history files running:
+```sh
+make view
+```
+
+And you can clean all .class/.history files by running:
+```sh
+make clean
 ```
 
 ## Useful links
